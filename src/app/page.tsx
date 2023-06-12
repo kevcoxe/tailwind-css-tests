@@ -10,7 +10,7 @@ export default function Home() {
 
   const postContent = Posts.map((post: PostInfoInterface, i: number) => {
     return (
-      <div key={i} className="col-span-3 col-start-2">
+      <div key={i} className="col-span-5 lg:col-span-3 lg:col-start-2">
         <ImagePost postInfo={ post } />
       </div>
     )
@@ -20,7 +20,7 @@ export default function Home() {
     <main className="container mx-auto">
       <Header />
       <Body>
-        <div className="grid grid-cols-5 gap-2 ">
+        <div className="grid grid-cols-5 gap-2">
 
           { postContent }
 
