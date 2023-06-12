@@ -10,7 +10,7 @@ export default function Home() {
 
   const postContent = Posts.map((post: PostInfoInterface, i: number) => {
     return (
-      <div key={i} className="col-span-5 lg:col-span-3 lg:col-start-2">
+      <div key={i} className="col-span-5 lg:col-span-3 lg:col-start-2 sm:max-h-full">
         <ImagePost postInfo={ post } />
       </div>
     )
