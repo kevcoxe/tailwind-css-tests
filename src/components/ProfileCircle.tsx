@@ -1,8 +1,4 @@
 
-const LG_BASE_SIZE = 32;
-const MD_BASE_SIZE = 24;
-const SM_BASE_SIZE = 16;
-
 export default function ProfileCircle (params: { profilePic: string, size?: string, newStory ?: boolean }) {
 
   const { newStory = false, profilePic } = params
@@ -14,23 +10,23 @@ export default function ProfileCircle (params: { profilePic: string, size?: stri
 
   switch (size) {
     case "lg":
-      outerCircleDimensions = `w-${ LG_BASE_SIZE } h-${ LG_BASE_SIZE }`
-      innerCircleDimensions = `w-${ LG_BASE_SIZE - 4 } h-${ LG_BASE_SIZE - 4 }`
+      outerCircleDimensions = "w-32 h-32"
+      innerCircleDimensions = "w-28 h-28"
       break;
 
     case "md":
-      outerCircleDimensions = `w-${ MD_BASE_SIZE } h-${ MD_BASE_SIZE }`
-      innerCircleDimensions = `w-${ MD_BASE_SIZE - 4 } h-${ MD_BASE_SIZE - 4 }`
+      outerCircleDimensions = "w-24 h-24"
+      innerCircleDimensions = "w-20 h-20"
       break;
 
     case "sm":
-      outerCircleDimensions = `w-${ SM_BASE_SIZE } h-${ SM_BASE_SIZE }`
-      innerCircleDimensions = `w-${ SM_BASE_SIZE - 2 } h-${ SM_BASE_SIZE - 2 }`
+      outerCircleDimensions = "w-16 h-16"
+      innerCircleDimensions = "w-14 h-14"
       break;
 
     default:
-      outerCircleDimensions = `w-${ MD_BASE_SIZE } h-${ MD_BASE_SIZE }`
-      innerCircleDimensions = `w-${ MD_BASE_SIZE - 4 } h-${ MD_BASE_SIZE - 4 }`
+      outerCircleDimensions = "w-24 h-24"
+      innerCircleDimensions = "w-20 h-20"
       break;
   }
 
