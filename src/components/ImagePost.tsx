@@ -56,7 +56,7 @@ export default function ImagePost (params: ImagePostParams) {
           <div className="flex flex-col">
             <span>{ postInfo.views } views</span>
             <div className="flex">
-              <span><strong>{ postInfo.profileName }</strong> { postInfo.description }</span>
+              <span><strong>{ postInfo.profile.profileName }</strong> { postInfo.description }</span>
             </div>
             <span className="font-light text-gray-400">View all { postInfo.comments.length } comments</span>
             <span className="text-gray-300 font-extralight">{ postInfo.datePosted }</span>
