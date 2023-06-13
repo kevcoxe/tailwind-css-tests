@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 export default function ProfileCircle (params: { profilePic: string, size?: string, newStory ?: boolean }) {
 
@@ -33,7 +34,13 @@ export default function ProfileCircle (params: { profilePic: string, size?: stri
   return (
     <div className={`flex ${ outerCircleDimensions } rounded-full ${ storyNotifier } justify-center items-center m-3`}>
       <div className={`overflow-hidden bg-gray-500 border-2 border-white rounded-full ${ innerCircleDimensions }`}>
-        <img className={`object-cover object-center rounded-full ${ innerCircleDimensions }`} src={profilePic}></img>
+        <Image
+          src={ profilePic }
+          alt="Picture of the author"
+          width={50}
+          height={50}
+          className={`object-cover object-center rounded-full ${ innerCircleDimensions }`} 
+        />
       </div>
     </div>
   )

@@ -5,16 +5,16 @@ import ProfilePin from "./ProfilePin"
 import ActionIconRow from "./ActionIconRow"
 import { PostInfoInterface } from "@/types/myTypes";
 import { MouseEvent } from "react"
+import { getProfileWithId } from "@/app/actions";
 
 
 interface ImagePostParams {
   postInfo: PostInfoInterface
 }
 
-export default function ImagePost (params: ImagePostParams) {
+export default function ImagePost ({ postInfo }: ImagePostParams) {
 
-  const { postInfo } = params
-
+  const profile = getProfileWithId(postInfo.profileId)
   const [ liked, setLike ] = useState(false)
   const [ bookmarked, setBookmarked ] = useState(false)
 
@@ -54,7 +54,7 @@ export default function ImagePost (params: ImagePostParams) {
           <div className="flex flex-col">
             <span>{ postInfo.views } views</span>
             <div className="flex">
-              <span><strong>{ postInfo.profile.profileName }</strong> { postInfo.description }</span>
+              <span><strong>{ profile?.profileName }</strong> { postInfo.description }</span>
             </div>
             <span className="font-light text-gray-400">View all { postInfo.comments.length } comments</span>
             <span className="text-gray-300 font-extralight">{ postInfo.datePosted }</span>

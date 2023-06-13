@@ -3,9 +3,11 @@ import Link from "next/link";
 
 import { getProfileWithId } from "@/app/actions";
 
-export default function ProfilePin (params: { profileId: string }) {
+interface ProfilePinParams {
+  profileId: string
+}
 
-  const { profileId } = params
+export default function ProfilePin ({ profileId }: ProfilePinParams) {
 
   const profile = getProfileWithId(profileId)
 

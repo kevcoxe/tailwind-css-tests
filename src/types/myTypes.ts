@@ -15,7 +15,6 @@ export interface ProfileInfoInterface {
 
 export interface PostInfoInterface {
   id: string
-  profile: ProfileInfoInterface
   profileId: string
   imageLocation: string
   description: string
