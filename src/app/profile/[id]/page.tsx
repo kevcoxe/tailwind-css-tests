@@ -2,7 +2,7 @@ import Body from "@/components/Body"
 import Link from "next/link";
 
 import { getPostsWithProfileId } from "@/app/actions";
-import ImageGrid from "@/components/ImageGrid"
+import PostViewPicker from "@/components/PostViewPicker";
 
 interface ProfileParams {
   id: string
@@ -12,8 +12,6 @@ export default function Page({ params: { id } }: { params: ProfileParams }) {
 
   const posts = getPostsWithProfileId(id)
 
-  console.log(posts)
-
   return (
     <Body>
       <div className="container">
@@ -22,9 +20,7 @@ export default function Page({ params: { id } }: { params: ProfileParams }) {
           <Link href={`/profile`}>Profiles</Link>
         </div>
       </div>
-      <ImageGrid
-        posts={posts}
-      />
+      <PostViewPicker posts={posts} startOnGrid={true}/>
     </Body>
   )
 }

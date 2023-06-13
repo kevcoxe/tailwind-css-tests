@@ -10,11 +10,12 @@ import { MdTableRows } from "react-icons/md"
 
 interface PostViewPickerParams {
   posts: PostInfoInterface[]
+  startOnGrid?: boolean
 }
 
-export default function PostViewPicker ({ posts }: PostViewPickerParams) {
+export default function PostViewPicker ({ posts, startOnGrid = false }: PostViewPickerParams) {
 
-  const [ showGridView, setGridView ] = useState(false)
+  const [ showGridView, setGridView ] = useState(startOnGrid)
 
   const content = showGridView ? (
     <ImageGrid posts={posts} />
