@@ -27,9 +27,7 @@ export default function ImagePost (params: ImagePostParams) {
       <div className="grid grid-cols-5 p-4 m-1 rounded-md shadow-lg">
         <div className="col-span-5">
           <ProfilePin
-            profileName={ postInfo.profile.profileName }
-            location={ postInfo.profile.profileLocation }
-            profilePic={ postInfo.profile.profilePic }
+            profileId={ postInfo.profileId }
           />
         </div>
 

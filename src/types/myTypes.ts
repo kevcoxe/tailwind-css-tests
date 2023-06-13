@@ -1,5 +1,4 @@
 
-
 export interface CommentInfoInterface {
   profileName: string
   content: string
@@ -7,6 +6,7 @@ export interface CommentInfoInterface {
 }
 
 export interface ProfileInfoInterface {
+  id: string
   profileName: string
   profileLocation: string
   profilePic: string
@@ -14,7 +14,9 @@ export interface ProfileInfoInterface {
 }
 
 export interface PostInfoInterface {
+  id: string
   profile: ProfileInfoInterface
+  profileId: string
   imageLocation: string
   description: string
   views: string

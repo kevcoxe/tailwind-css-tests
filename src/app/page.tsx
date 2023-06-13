@@ -1,5 +1,3 @@
-import Skelenton from "@/components/Skelenton"
-import Header from "@/components/Header"
 import Body from "@/components/Body"
 import ImagePost from "@/components/ImagePost"
 import { PostInfoInterface } from "@/types/myTypes";
@@ -17,15 +15,12 @@ export default function Home() {
   })
 
   return (
-    <main className="container mx-auto">
-      <Header />
-      <Body>
-        <div className="grid grid-cols-5 gap-2">
+    <Body>
+      <div className="grid grid-cols-5 gap-2">
 
-          { postContent }
+        { postContent }
 
-        </div>
-      </Body>
-    </main>
+      </div>
+    </Body>
   )
 }
