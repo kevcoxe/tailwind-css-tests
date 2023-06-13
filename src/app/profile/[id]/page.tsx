@@ -5,12 +5,14 @@ import { getPostsWithProfileId } from "@/app/actions";
 import ImageGrid from "@/components/ImageGrid"
 
 interface ProfileParams {
-  slug: string
+  id: string
 }
 
-export default function Page({ params: { slug } }: { params: ProfileParams }) {
+export default function Page({ params: { id } }: { params: ProfileParams }) {
 
-  const posts = getPostsWithProfileId(slug)
+  const posts = getPostsWithProfileId(id)
+
+  console.log(posts)
 
   return (
     <Body>

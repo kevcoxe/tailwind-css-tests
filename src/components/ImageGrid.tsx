@@ -17,6 +17,7 @@ export default function ImageGrid ({ posts }: ImageGridParams) {
           alt="Picture of the author"
           width={500}
           height={500}
+          quality={25}
         />
       </div>
     )
